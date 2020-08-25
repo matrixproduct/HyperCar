@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+</head>
+<body>
+    <ul>
+    {% for service in service_html_list %}
+        <li> <a target="_blank" href="/get_ticket/{{service.0}}">{{service.1}}</a> </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

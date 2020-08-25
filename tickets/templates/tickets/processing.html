@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Processing</title>
+</head>
+<body>
+    {% for info in queue.values %}
+        <div> {{info.0}} queue: {{info.1}} </div>
+    {% endfor %}
+    <br>
+    <form action="/processing" method="post">{% csrf_token %}
+    <button type="submit">Process next</button>
+    </form>
+
+</body>
+</html>
